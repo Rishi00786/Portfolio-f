@@ -9,6 +9,11 @@ import meta from "./meta.png";
 import starbucks from "./starbucks.png";
 import tesla from "./tesla.png";
 import shopify from "./shopify.png";
+import github from './github.png'
+import discord_img from './discord_img.png'
+import ElectStore from './ElectStore.png'
+import Social from './Social.png'
+import news from './news.png'
 
 export {
     logo,
@@ -21,5 +26,10 @@ export {
     meta,
     starbucks,
     tesla,
+    github,
     shopify,
+    discord_img,
+    ElectStore,
+    Social,
+    news,
 }

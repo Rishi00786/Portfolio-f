@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
+import Works from "./components/Works";
 
 const App = () => { 
   return (
@@ -15,8 +16,7 @@ const App = () => {
         </div>
         <About />
         <Experience />
-        {/* <Works /> */}
-        {/* <Feedbacks /> */}
+        <Works />
         <div className='relative z-0'>
           <Contact />
         </div>
