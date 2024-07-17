@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react-refresh/only-export-components */
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -16,13 +16,23 @@ import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 
 const ExperienceCard = ({ experience }) => {
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      setTheme(savedTheme);
+    }
+  }, []);
+
+  const lineColor = theme === "dark" ? "#123f3f" : "black"; // Adjust colors based on your theme log
   return (
     <VerticalTimelineElement
       contentStyle={{
         background: "#1d1836",
         color: "#fff",
       }}
-      contentArrowStyle={{ borderRight: "7px solid  #123f3f" }}
+      contentArrowStyle={{ borderRight: `7px solid ${lineColor}` }} // Use dynamic color
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
       icon={
@@ -60,6 +70,15 @@ const ExperienceCard = ({ experience }) => {
 };
 
 const Experience = () => {
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      setTheme(savedTheme);
+    }
+  }, []);
+
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -77,6 +96,7 @@ const Experience = () => {
             <ExperienceCard
               key={`experience-${index}`}
               experience={experience}
+              theme={theme} // Pass theme as a prop
             />
           ))}
         </VerticalTimeline>

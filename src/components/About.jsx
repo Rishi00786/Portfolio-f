@@ -14,7 +14,7 @@ const ServiceCard = ({ index, title, icon }) => (
   <Tilt tiltMaxAngleX={25} tiltMaxAngleY={25} scale={1} speed={350} className='xs:w-[250px] w-full'>
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
+      className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card ml-4 mr-4'
     >
       <div className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'>
         <img
@@ -34,14 +34,14 @@ const ServiceCard = ({ index, title, icon }) => (
 const About = () => {
   return (
     <>
-      <motion.div variants={textVariant()} className="ml-4 mr-4 md:ml-0">
+      <motion.div variants={textVariant()} className="ml-4 mr-4">
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] ml-4 mr md:ml-0'
+        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] ml-4 mr-4'
       >
         I&apos;m a skilled software developer with experience in TypeScript and
         JavaScript, and expertise in frameworks like Reactjs , Nextjs , Node.js , MySQL and MongoDB.

@@ -66,7 +66,7 @@ const ProjectCard = ({
 const Works = () => {
   return (
     <>
-      <motion.div variants={textVariant()} className="ml-4 mr-4 md:ml-0">
+      <motion.div variants={textVariant()} className="ml-4 mr-4">
         <p className={`${styles.sectionSubText} `}>My work</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
       </motion.div>
@@ -74,7 +74,7 @@ const Works = () => {
       <div className='w-full flex'>
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px] ml-4 mr-4 md:ml-0'
+          className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px] ml-4 mr-4'
         >
           Following projects showcase my skills and experience through
           real-world examples of my work. Each project is briefly described with
